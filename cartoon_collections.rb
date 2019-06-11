@@ -23,9 +23,11 @@ end
 
 def find_the_cheese(strings)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  cheese = []
-  strings.map do |cheeses|
-  strings.find do |cheeses|
+  cheeses = []
+  strings.each do |ingredient|
+    if ingredient.in(cheese_types)
+      cheeses << ingredient
+    end
   end
   return cheeses
   end
