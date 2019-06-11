@@ -26,9 +26,8 @@ def find_the_cheese(strings)
   cheeses = []
   strings.each do |ingredient|
     if cheese_types.include? ingredient
-      cheeses << ingredient
+      return ingredient
     end
   end
-  return cheeses
-  end
+  return nil
 end
